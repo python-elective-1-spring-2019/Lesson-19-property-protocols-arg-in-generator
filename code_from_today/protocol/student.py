@@ -13,12 +13,16 @@ class Student:
         self.__name = name.capitalize()
 
     def __add__(self, student):
-        return f'I´m Anna {self.name}´s daughter i was created by to students'
+        return f'Im Anna, im the daughter of {self.name} :)'
 
-    def __repr__(self):
-        return f'{self.name}, {self.cpr}'
+    def __len__(self):
+        return 180
 
     def __str__(self):
-        return f'name: {self.name} \ncpr: {self.cpr}'
-        
+        return self.name + ' '
+
+    def __repr__(self):
+        return '{name : self.name}'
+    
+
 

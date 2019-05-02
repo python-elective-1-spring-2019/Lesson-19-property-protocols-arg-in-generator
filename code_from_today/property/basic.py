@@ -1,9 +1,18 @@
 class P:
     def __init__(self, x):
-        self.__x = x
+        self.x = x
 
-    def get_x(self):
+    @property
+    def x(self):
         return self.__x
 
-    def set_x(self, x):
-        self.__x = x
+    @x.setter
+    def x(self, x):
+        if x > 1000:
+            self.__x = 1000
+        elif x < 0:
+            self.__x = 0
+        else:
+            self.__x = x
+        
+
